@@ -1,0 +1,6 @@
+<%=@cur.name+" "+@cur.year_completed.to_s%>
+<form action="/landmarks/<%=@cur.id.to_s%>" method="post">
+<input type="text" name="landmark[name]" id="name">
+<input type="text" name="landmark[year_completed]" id="year_completed">
+<input type="submit" value="Edit Landmark">
+</form>

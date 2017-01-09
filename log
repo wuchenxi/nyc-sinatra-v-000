@@ -1,0 +1,31 @@
+D, [2017-01-09T16:05:03.499147 #8509] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Run options: include {:focus=>true}
+
+All examples were filtered out; ignoring {:focus=>true}
+
+FiguresController
+  allows you to view form to create a new figure
+  allows you to create a new figure with a title (FAILED - 1)
+
+Failures:
+
+  1) FiguresController allows you to create a new figure with a title
+     Failure/Error: check "title_#{Title.first.id}"
+
+     Capybara::ElementNotFound:
+       Unable to find checkbox "title_38"
+     # /var/lib/gems/2.3.0/gems/capybara-2.7.0/lib/capybara/node/finders.rb:44:in `block in find'
+     # /var/lib/gems/2.3.0/gems/capybara-2.7.0/lib/capybara/node/base.rb:85:in `synchronize'
+     # /var/lib/gems/2.3.0/gems/capybara-2.7.0/lib/capybara/node/finders.rb:33:in `find'
+     # /var/lib/gems/2.3.0/gems/capybara-2.7.0/lib/capybara/node/actions.rb:85:in `check'
+     # /var/lib/gems/2.3.0/gems/capybara-2.7.0/lib/capybara/session.rb:699:in `block (2 levels) in <class:Session>'
+     # /var/lib/gems/2.3.0/gems/capybara-2.7.0/lib/capybara/dsl.rb:52:in `block (2 levels) in <module:DSL>'
+     # ./spec/controllers/figures_controller_spec.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 0.36629 seconds (files took 0.86084 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/controllers/figures_controller_spec.rb:29 # FiguresController allows you to create a new figure with a title
+
